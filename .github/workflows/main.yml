@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Seleniumをインストールする！！！
-        run: pip3 install install selenium
+        run: sudo pip3 install install selenium
       - name: 検温フォームを送る！！！！
         run: sudo python3 main.py
