@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 options = Options()
 options.add_argument('--headless')# ヘッドレスモードで実行する(Windowが生成されないからディスプレイがない環境でもできる)
 
-driver = webdriver.Chrome(executable_path="/usr/local/share/chrome_driver") # https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md にかいてあるっぽい
+driver = webdriver.Chrome() # https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md にかいてあるっぽい
 
 url = f"https://docs.google.com/forms/d/e/1FAIpQLSdYD-mLD2ILW9m7mLy-TqtmuFlt2lTP_jbRosNC7BP0zNesWA/viewform?usp=pp_url&entry.925303296={random.randint(360,366)/10}" # 360~366までの乱数(整数)を10で割って入れる
 
