@@ -7,13 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
-          architecture: 'x64'
-      - name: ChromeDriverやSeleniumをインストールする！！！
-        run: |
-          pip install get-chrome-driver --upgrade
-          pip install selenium
+      - name: Seleniumをインストールする！！！
+        run: pip3 install install selenium
       - name: 検温フォームを送る！！！！
-        run: python main.py
+        run: python3 main.py
