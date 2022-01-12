@@ -7,9 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: chrome driverに実行権限を与える！！
-        run: sudo chmod a+x /usr/local/share/chrome_driver
+      - name: Setting up chrome driver
+        uses: nanasess/setup-chromedriver@v1
+        with:
+          chromedriver-version: '96.0.4664.45'
       - name: Seleniumをインストールする！！！
-        run: sudo pip3 install install selenium
+        run: pip3 install install selenium
+      # https://yiskw713.hatenablog.com/entry/2022/01/05/190000
+      # 一週間前の記事だし動くやろ！w
+      - name: chromedriver-binaryをインストールする！！！ 
+        run: pip3 install chromedriver-binary==96.0.4664.45.0
       - name: 検温フォームを送る！！！！
-        run: sudo python3 main.py
+        run: python3 main.py
