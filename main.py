@@ -10,6 +10,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 options = Options()
 options.add_argument('--headless')# ヘッドレスモードで実行する(Windowが生成されないからディスプレイがない環境でもできる)
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
 
 driver = webdriver.Chrome() # https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md にかいてあるっぽい
 
