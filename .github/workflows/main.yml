@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: chrome driverに実行権限を与える！！
+        run: sudo chmod a+x /usr/local/share/chrome_driver
       - name: Seleniumをインストールする！！！
         run: sudo pip3 install install selenium
       - name: 検温フォームを送る！！！！
