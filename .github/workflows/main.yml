@@ -11,11 +11,16 @@ jobs:
         uses: nanasess/setup-chromedriver@v1
         with:
           chromedriver-version: '96.0.4664.45'
+      # set up python
+      - name: Setting up python.
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
       - name: Seleniumをインストールする！！！
         run: pip3 install install selenium
       # https://yiskw713.hatenablog.com/entry/2022/01/05/190000
       # 一週間前の記事だし動くやろ！w
       - name: chromedriver-binaryをインストールする！！！ 
-        run: pip3 install chromedriver-binary==96.0.4664.45.0
+        run: pip3 install chromedriver-binary==96.0.4664.45
       - name: 検温フォームを送る！！！！
         run: python3 main.py
